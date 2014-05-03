@@ -9,12 +9,10 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-    baseName = 'gs-rest-service'
+    baseName = 'experiment-core'
     version =  '0.1.0'
 }
 
@@ -27,8 +25,4 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("com.fasterxml.jackson.core:jackson-databind")
     testCompile("junit:junit")
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.11'
 }
