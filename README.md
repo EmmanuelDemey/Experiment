@@ -7,3 +7,4 @@ Experiment
 * Java8
 * Angular Dart
 * Spring Security
+* Travis CI
