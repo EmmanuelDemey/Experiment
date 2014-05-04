@@ -8,17 +8,11 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
 apply plugin: 'spring-boot'
 
 jar {
     baseName = 'experiment-core'
     version =  '0.1.0'
-}
-
-repositories {
-    mavenCentral()
-    maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 dependencies {
