@@ -2,6 +2,10 @@ allprojects {
 	apply plugin: 'java'
 	apply plugin: 'eclipse'
 	apply plugin: 'idea'
+    apply plugin: "groovy"
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 
 	repositories {
     	mavenCentral()
@@ -11,4 +15,15 @@ allprojects {
 	task wrapper(type: Wrapper) {
     	gradleVersion = '1.11'
 	}
+
+    dependencies {
+        groovy "org.codehaus.groovy:groovy-all:1.8.6"
+        testCompile "org.spockframework:spock-core:0.6-groovy-1.8"
+        compile "junit:junit:4.6"
+    }
+}
+project(':experiment-server/experiment-api') {
+    dependencies {
+        compile project(':experiment-server/experiment-core')
+    }
 }

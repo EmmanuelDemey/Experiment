@@ -1,1 +1,1 @@
-include "experiment-core"
+include "experiment-server/experiment-api", "experiment-server/experiment-core"

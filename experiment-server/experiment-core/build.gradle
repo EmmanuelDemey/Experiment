@@ -1,0 +1,8 @@
+jar {
+    baseName = 'experiment-core'
+    version =  '0.1.0'
+}
+
+dependencies {
+    testCompile("junit:junit")
+}
